@@ -1,0 +1,71 @@
+body {
+  font-family: "PingFang TC";
+}
+
+.text-vertical {
+  writing-mode: vertical-rl;
+}
+
+a {
+  text-decoration: none;
+}
+
+.logo {
+  @include hide-test;
+  background: url(../images/logotype-sm-dark.svg) no-repeat;
+  display: block;
+  width: 115px;
+  height: 18px;
+}
+
+@media (min-width: 768px) {
+  .logo {
+    background: url(../images/logo-all-dark.svg) no-repeat;
+    width: 220px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-link {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .nav-item {
+    border-bottom: 1px solid #ccc;
+  }
+
+  .social-icon {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .order-mail {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .w-50 {
+    width: 100% !important;
+  }
+}
+
+.input-group {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  z-index: 9999;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  margin-top: 3px;
+}
+
+.input-indent {
+  text-indent: 1.5rem;
+}

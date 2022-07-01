@@ -1,0 +1,31 @@
+.cart-img {
+    width: 110px;
+    height: 110px;
+  }
+  @media (max-width:576px){
+    .cart-img{
+      width: 157px;
+    }
+  }
+  
+  @media (max-width:992px){
+    .hide-td{
+      display: none;
+    }
+  }
+  
+  @media (min-width:992px){
+    .summary{
+      background-color: $main;
+      color:$white !important;
+    }
+    .order-title{
+      background-color: $main !important;
+    }
+  }
+  
+  .counter {
+    width: 48px !important;
+    height: 48px !important;
+  }
+  

@@ -1,0 +1,192 @@
+.banner {
+  background: url(https://images.unsplash.com/photo-1473256599800-b48c7c88cd7e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ae0d68ab0db4ee79bdce92722b31112b&auto=format&fit=crop&w=2725&q=80)
+    center / cover;
+  min-height: 496px;
+}
+
+.list-item {
+  height: 256px;
+}
+
+.list-img-1 {
+  background-image: url(https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8ZGVzc2VydHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60);
+}
+
+.list-img-2 {
+  background-image: url(https://images.unsplash.com/photo-1508737804141-4c3b688e2546?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8ZGVzc2VydHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60);
+}
+
+.list-img-3 {
+  background-image: url(https://images.unsplash.com/photo-1541599188778-cdc73298e8fd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGRlc3NlcnR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60);
+}
+
+.bg-cover {
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-filter-1 {
+  background-color: rgba($color: $accent, $alpha: 0.8);
+}
+.bg-filter-2 {
+  background-color: rgba($color: $main, $alpha: 0.8);
+}
+.backdrop-blur {
+  width: 260px;
+  backdrop-filter: blur(5px);
+}
+
+@media (max-width: 768px) {
+  .backdrop-blur {
+    width: 33.333vw;
+  }
+}
+
+@media (min-width: 992px) {
+  .section-quote {
+    height: 420px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .quote {
+    writing-mode: vertical-rl;
+  }
+}
+
+.section-img {
+  width: 460px;
+  height: 460px;
+}
+@media (min-width: 992px) {
+  .section-img {
+    margin-top: -20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.hlr {
+  writing-mode: initial;
+  padding-left: 1.2rem;
+}
+
+.text-content {
+  line-height: 2;
+  height: auto;
+}
+@media (min-width: 992px) {
+  .text-content {
+    writing-mode: vertical-rl;
+    height: 280px;
+  }
+}
+
+.section-title {
+  text-indent: -1rem;
+  margin-top: -10px;
+}
+
+.card-item-img {
+  height: 315px;
+}
+
+.card {
+  width: 300px;
+}
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+  }
+}
+@media (max-width: 576px) {
+  .card {
+    width: 315px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.card-image {
+  position: relative;
+}
+
+.special {
+  position: absolute;
+  top: 0;
+  left: 20px;
+}
+
+.heart-icon {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  color: $main;
+}
+@media (max-width: 768px) {
+  .why {
+    writing-mode: horizontal-tb;
+  }
+}
+
+@media (max-width: 576px) {
+  .row {
+    --bs-gutter-x: 0;
+  }
+}
+
+.dash,
+.dash-2 {
+  position: relative;
+}
+
+.dash::after {
+  position: absolute;
+  content: "";
+  width: 50px;
+  height: 1px;
+  background: $main;
+  top: 12px;
+  left: 80px;
+  margin-left: 1rem;
+}
+.dash-2::after {
+  position: absolute;
+  content: "";
+  width: 50px;
+  height: 1px;
+  background: $main;
+  top: 22px;
+  left: 100px;
+  margin-left: 1rem;
+}
+@media (min-width: 769px) {
+  .dash::after {
+    width: 1px;
+    height: 50px;
+    right: 15px;
+    top: 100px;
+  }
+  .dash-2::after {
+    width: 1px;
+    height: 50px;
+    right: 15px;
+    top: 130px;
+  }
+}
+
+.nav-link:hover,
+.backdrop-blur:hover,
+.add-btn:hover{
+  color: $accent !important;
+  transition: color .3s;
+}

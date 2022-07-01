@@ -1,0 +1,11 @@
+.product-banner {
+    background: url(https://images.unsplash.com/photo-1517084166762-9edca41416e6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80) center / cover;
+    min-height: 496px;
+  }
+  
+  @media (max-width:768px){
+    .list-content{
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }

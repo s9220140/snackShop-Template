@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="Description" content="Enter your description here" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <link rel="stylesheet" href="style/all.css" />
+  <title>結帳頁面-3</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md navbar-light">
+    <div class="container">
+      <button class="navbar-toggler ms-3 d-md-none border-0" type="button" data-bs-toggle="collapse"
+        data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <h1>
+        <a class="navbar-brand logo" href="index.html">logo</a>
+      </h1>
+      <a class="nav-link text-main d-md-none me-3" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+      <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+          <li class="nav-item text-center active">
+            <a class="nav-link text-main fw-bold px-6" href="index.html">首頁 <span
+                class="visually-hidden">(current)</span></a>
+          </li>
+          <li class="nav-item text-center">
+            <a class="nav-link text-main fw-bold px-6" href="porduct.html">甜點</a>
+          </li>
+          <li class="nav-item text-center">
+            <a class="nav-link text-main fw-bold px-6" href="login.html">登入</a>
+          </li>
+          <li class="nav-item d-none d-md-block text-center">
+            <a class="nav-link text-main d-md-block" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container my-4">
+    <div class="row">
+      <div class="col-md-8">
+        
+        <form action="completed.html" class="bg-main text-white needs-validation" novalidate>
+          <div class="p-3">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h4 class="mb-0">發票</h4>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="process-item border rounded-circle bg-white">
+                  <i class="fas fa-check text-main"></i>               
+                </div>
+                <div class="line"></div>
+                <div class="process-item border rounded-circle bg-white">
+                  <i class="fas fa-check text-main"></i>               
+                </div>
+                <div class="line"></div>
+                <div class="outer-circle border rounded-circle d-flex justify-content-center align-items-center">
+                  <div class="inner-circle rounded-circle bg-white"></div>
+                </div>
+              </div>
+            </div>
+            <div class="list-group flex-row mb-3 fs-5 text-center fw-bold" id="list-tab" role="tablist">
+              <a class="list-group-item list-group-item-action active list-custom" id="list-e-invoice-list" data-bs-toggle="list"
+                href="#e-invoice" role="tab" aria-controls="e-invoice">電子發票</a>
+              <a class="list-group-item list-group-item-action list-custom" id="list-invoice-list" data-bs-toggle="list"
+                href="#invoice" role="tab" aria-controls="invoice">郵寄發票</a>
+            </div>
+            <div class="tab-content" id="nav-tabContent">
+              <!-- 電子發票 -->
+              <div class="tab-pane fade show active" id="e-invoice" role="tabpanel" aria-labelledby="list-home-list">
+                <div class="mb-3">
+                  <label for="mail" class="form-label">電子郵件信箱</label>
+                  <input type="email" class="form-control" name="" id="mail" aria-describedby="helpId"
+                    placeholder="hex@gmail.com" required>
+                    <div class="invalid-feedback">
+                      請輸入信箱
+                    </div>
+                </div>
+              </div>
+
+              <!-- 郵寄發票 -->
+              <div class="tab-pane fade" id="invoice" role="tabpanel" aria-labelledby="list-invoice-list">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="mb-3">
+                      <div class="d-flex">
+                        <label for="address" class="form-label">地址</label>
+                        <div class="form-check ms-auto">
+                          <input class="form-check-input" type="checkbox" id="address-check" />
+                          <label class="form-check-label" for="address-check">同運送地址</label>
+                        </div>
+                      </div>
+
+                      <div class="d-flex">
+                        <select class="form-select me-1" name="" id="">
+                          <option selected>高雄市</option>
+                          <option value="1">New Delhi</option>
+                          <option value="2">Istanbul</option>
+                          <option value="3">Jakarta</option>
+                        </select>
+                        <select class="form-select ms-1" name="" id="">
+                          <option selected>新興區</option>
+                          <option value="1">New Delhi</option>
+                          <option value="2">Istanbul</option>
+                          <option value="3">Jakarta</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="mb-3">
+                      <input type="text" class="form-control" name="" id="address" aria-describedby="helpId"
+                        placeholder="幸福路520號" required>
+                        <div class="invalid-feedback">
+                          請輸入地址
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="taxnum" class="form-label">統一編號 (選填)</label>
+              <input type="text" class="form-control" name="" id="taxnum" aria-describedby="helpId"
+                placeholder="12345678" />
+            </div>
+          </div>
+          <div class="d-grid gap-2">
+            <button type="submit" class="btn btn-accent fw-bold fs-5 text-main">
+              確認結帳
+            </button>
+          </div>
+         
+ 
+        </form>
+      </div>
+      <div class="col-md-4">
+        <div class="sum pb-2 border">
+          <h4 class="text-center py-3 text-main bg-vice fw-bold">訂單摘要</h4>
+          <div class="content text-main px-3">
+            <div class="d-flex justify-content-between text-lighter">
+              <p>小計</p>
+              <strong>NT$ 2,700</strong>
+            </div>
+            <div class="d-flex justify-content-between text-lighter">
+              <p>運費</p>
+              <strong>NT$ 300</strong>
+            </div>
+            <div class="d-flex justify-content-between text-lighter">
+              <strong>總計</strong>
+              <strong>NT$ 3,000</strong>
+            </div>
+          </div>
+        </div>
+        <div class="sum pb-2 border">
+          <h4 class="text-center py-3 text-main bg-vice fw-bold">購物清單</h4>
+          <div class="content text-main px-3">
+            <div class="d-flex my-2 align-items-center text-lighter">
+              <img class="cart-img me-2"
+                src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8ZGVzc2VydHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                alt="cart-img" />
+              <div>
+                <p class="mb-0">焦糖馬卡龍（2）</p>
+                <strong>NT$ 900</strong>
+              </div>
+            </div>
+            <div class="d-flex my-2 align-items-center text-lighter">
+              <img class="cart-img me-2"
+                src="https://images.unsplash.com/photo-1495147466023-ac5c588e2e94?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8ZGVzc2VydHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                alt="cart-img" />
+              <div>
+                <p class="mb-0">焦糖馬卡龍（2）</p>
+                <strong>NT$ 900</strong>
+              </div>
+            </div>
+            <div class="d-flex my-2 align-items-center text-lighter">
+              <img class="cart-img me-2"
+                src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8ZGVzc2VydHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                alt="cart-img" />
+              <div>
+                <p class="mb-0">焦糖馬卡龍（2）</p>
+                <strong>NT$ 900</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-vice">
+    <div class="bg-main py-6">
+      <div class="container px-4">
+        <div class="d-lg-flex justify-content-between align-items-center">
+          <div class="order-mail d-flex justify-content-center">
+            <img width="40px" src="images/logo-light.svg" alt="logo-light" />
+            <h4 class="text-white mb-0 mt-1 ms-4">訂閱你我的甜蜜郵件</h4>
+          </div>
+          <div class="input-group input-group-lg w-50">
+            <div class="input-icon">
+              <i class="fas fa-envelope text-main"></i> 
+            </div>         
+            <input type="text" class="form-control input-indent" aria-label="Recipient's username"
+              aria-describedby="button-addon2" />
+            <button class="btn btn-accent" type="button" id="button-addon2">
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container px-4">
+      <div class="d-flex justify-content-between">
+        <div class="contact d-flex flex-column justify-content-between">
+          <img class="footer-logo my-6" src="images/logotype-sm-dark.svg" alt="footer-logo" />
+          <ul class="list-unstyled mb-0">
+            <li><a class="text-main" href="tel:+">07-1234-5678 </a></li>
+            <li><a class="text-main" href="mailto:">sweetaste@email.com</a></li>
+            <li><a class="text-main" href="https://goo.gl/maps/YthBVzp74it9PeL49" target="_blank">800 高雄市新興區幸福路 520 號</a></li>
+          </ul>
+        </div>
+        <p class="h3 quote d-none d-md-block text-main lh-base m-0 pt-4 fw-bold">
+          今天是個<br /><span class="mt-3 line">吃甜食的好日子</span>
+        </p>
+      </div>
+      <div class="d-md-flex justify-content-between align-items-center py-6">
+        <div class="social-icon">
+          <a class="text-main" href="#"><i class="fab fa-2x fa-instagram-square me-2"></i></a>
+          <a class="text-main" href="#"><i class="fab fa-2x fa-facebook-square"></i></a>
+        </div>
+        <p class="copyright mb-0 text-main">
+          © 2022 Sweetaste* All Rights Reserved
+        </p>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/js/bootstrap.min.js"></script>
+  <script src="js/all.js"></script>
+</body>
+
+</html>
